@@ -1,3 +1,44 @@
-p {
+body {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    width:100%;
+    background-image: url(../img/carlos-muza-84523.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#bitcoin-exchange {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    left: 65%;
+    padding-top: 5%;
+}
+
+h2,
+#refresh-frequency {
+    color: #2e92db;
+}
+
+p,
+.price {
     display: inline-block;
+    margin: 10px;
+}
+
+button {
+    background-color: #2e92db;
+    color: #fff;
+    border: 1px solid #2e92db;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10%;
+    transition: 5sec ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #2e92db;
 }

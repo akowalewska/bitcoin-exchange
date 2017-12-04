@@ -1,0 +1,9 @@
+@media (max-width: 650px) {
+
+    #bitcoin-exchange {
+        position: initial;
+        text-align: center;
+        font-size: 0.75em;
+    }
+}
+

@@ -1,4 +1,4 @@
-/* Po załadowaniu strony pobierz aktualne ceny bitcoin-pln */
+/* After loading the page download current bitcoin-pln prices */
 
 $(function(){
     var buyPriceContainer = $('#buy-price');
@@ -12,7 +12,7 @@ $(function(){
         var currentBuyPrice = parseFloat(buyPriceContainer.html());
         var currentSellPrice = parseFloat(sellPriceContainer.html());        
         
-        /*Połącz się z API i pobierz dane */
+        /* Connect with API and download the data */
         
         $.getJSON('https://blockchain.info/pl/ticker', function(data) {
             buyPriceContainer.html(data.PLN.buy);
@@ -40,15 +40,14 @@ $(function(){
         });
     }
     
-    
-    /* Pierwsze wywołanie funkcji pobierającej dane po załadowaniu */
+    /* The first call to the function that downloads data after loading */
     getExchangeData();
     
-    /* Interwał w jakim ma być wywołana funkcja pobierająca aktualny kurs */
+    /* The interval to call the function that takes the current course */
     
     var interval = setInterval(getExchangeData, 5000);
     
-    /* ustaw nowy interwał */
+    /* change the interval */
     
     $('button').click(function(){
        clearInterval(interval);
@@ -58,8 +57,5 @@ $(function(){
         $('#refresh-frequency').html($(this).text());
         
     });
-    
-    
-    
     
 });
